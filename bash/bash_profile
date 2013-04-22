@@ -1,0 +1,13 @@
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if brew list | grep coreutils > /dev/null ; then
+      PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+        alias ls='ls -F --show-control-chars --color=auto'
+          eval `gdircolors -b $HOME/.dir_colors`
+fi
+alias grep='grep --color'
+alias egrep='egrep --color'
+alias fgrep='fgrep --color'
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/Users/foocoder/develop/apache-tomcat-7.0.37/bin:$PATH

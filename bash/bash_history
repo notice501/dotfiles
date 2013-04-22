@@ -1,0 +1,500 @@
+vi index.html 
+vi stylesheet.css 
+mkdir js
+cd js/
+ls
+vi main.js
+ls
+vi stage.js
+ls
+cd develop/
+ls
+ls
+cd js\ framework/
+ls
+git clone git@github.com:EightMedia/hammer.js.git
+ls
+cd hammer.js/
+ls
+cd plugins/
+ls
+cd ..
+ls
+cd dist/
+s
+ls
+vi hammer.js 
+ls
+cd ../..
+cd ..
+ls
+cd apache-tomcat-7.0.37/webapps/ROOT/
+ls
+cd tglhome/
+ls
+cp ~/develop/js\ framework/hammer.js/dist/hammer.js js/
+ls
+vi index.html 
+ls
+cd js
+ls
+rm te.js 
+ls
+rm hammer.js 
+ls
+vi stage.js 
+cd 
+cd develop/
+ls
+ls
+cd js\ framework/
+ls
+git clone git@github.com:JacksonTian/V5.git
+ls
+cd V5/
+ls
+cd example/
+ls
+cd simple/
+ls
+open index.html 
+cd ..
+ls
+vi temp/
+ls
+cd temp/
+ls
+open index.html 
+ls
+cd develop/apache-tomcat-7.0.37/webapps/ROOT/tglhome/
+ls
+cd js/
+ls
+vi stage.js 
+su
+cd /home
+l
+ls
+cd /var
+ls
+cd lib
+ls
+cd postfix/
+cd ..
+ks
+ls
+cd backups/
+ls
+cd named/
+ls
+cd ..
+cd /net/
+git clone https://github.com/fatih/subvim.git
+ls
+mv -r subvim/ develop/
+mv  subvim/ develop/
+ls
+cd develop/
+ls
+cd subvim/
+make
+ls
+vi README.md 
+ls
+cd 
+ls -a
+cd .vim
+ls
+ls
+cd 
+cd develop/
+ls
+cd subvim/
+ls
+make
+cd ..
+cd apache-tomcat-7.0.37/webapps/ROOT/tglhome/
+ls
+cd js/
+ls
+vi stage.js 
+ls
+cd .ssh/
+ls
+mv known_hosts known_hosts.bak 
+ssh jiadi@10.230.226.192
+sshfs jiadi@10.230.226.192:/home/jiadi/webos/TGL/apps/browser/ ~/develop/
+ls
+mv known_hosts known_hosts.bak
+sshfs jiadi@10.230.226.192:/home/jiadi/webos/TGL/apps/browser/ ~/develop/
+brew remove sshfs
+brew install sshfs
+brew info fuse4x-kext
+sudo /bin/cp -rfX /usr/local/Cellar/fuse4x-kext/0.9.2/Library/Extensions/fuse4x.kext /Library/Extensions
+sudo chmod +s /Library/Extensions/fuse4x.kext/Support/load_fuse4x
+sshfs jiadi@10.230.226.192:/home/jiadi/webos/TGL/apps/browser/ ~/develop/
+ls
+cd develop/
+ls
+ls
+ls
+fusermount -u ~/develop/
+fusermount -u ~/develop/
+cd develop/
+mkdir remote
+sshfs jiadi@10.230.226.192:/home/jiadi/webos/TGL/apps/browser/ ~/develop/remote/
+ls
+cd remote/
+ls
+vi index.html 
+cd assets/
+ls
+cd lib/
+ls
+cd ..
+ls
+cd seajs/
+ls
+cd ..
+cd webshell/
+ls
+cd src/
+ls
+ls
+cd page/
+ls
+cd ..
+cd page/
+ls
+cd managerpage.js 
+vi managerpage.js 
+cd ../..
+cd ..
+ls
+cd ..
+ls
+vi index.html 
+cd assets
+ls
+cd webshell/
+ls
+cd src/
+ls
+cd page/
+ls
+vi managerpage.js 
+cd 
+cd develop/
+cd apache-tomcat-7.0.37/
+ls
+cd webapps/ROOT/
+ls
+mkdir tglbookmark
+cd tgl
+cd tglbookmark/
+ls
+vi index.html
+vi index.html
+vi ~/.vimrc 
+vi index.html 
+ls
+cd develop/apache-tomcat-7.0.37/webapps/ROOT/
+ls
+vi html5-todo-list/js/script.js 
+cd 
+vi .vimrc 
+vi .vimrc 
+scp -r jiadi@10.230.226.192:/home/jiadi/webos/TGL/apps/browser/ ~/develop/remote/
+ls
+cd develop/remote/
+ls
+cd browser/
+ls
+ls
+cd develop/
+ls
+ls
+cd apache-tomcat-7.0.37/
+ls
+cd webapps/ROOT/
+ls
+cd tglbookmark/
+ls
+cd ..
+cd browser/
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+cd 
+cd develop/
+ls
+cd webworkspace/
+ls
+cd ..
+rm -rf teamtoy2-build-1869/
+cd remote/
+ls
+cd browser/
+ls
+ls -a
+ls
+cd ..
+ls
+cd ..
+cd work
+s
+ls
+ls
+ repo init -u ssh://jiadi.peijd@10.20.145.179:29418/repo/yunos/webos/TGL.git
+mkdir ~/bin
+PATH=~/bin:$PATH
+curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+ repo init -u ssh://jiadi.peijd@10.20.145.179:29418/repo/yunos/webos/TGL.git
+ls
+la
+ls -a
+rm .repo/
+rm -rf .repo/
+ls
+ls
+mkdir tgl
+cd tgl
+ git clone ssh://jiadi.peijd@10.20.145.179:29418/repo/yunos/webos/TGL
+scp -r jiadi@10.230.226.192:/home/jiadi/webos/TGL/ .
+ls
+cd TGL
+ls
+la
+ls -a
+git pull yunos master
+git status 
+git status yunos master
+git status 
+git pull yunos master
+git status 
+git add apps/browser/assets/
+git add apps/browser/index.html
+git commit -m "add bookmark ui"
+git push yunos master
+git push yunos HEAD:refs/for/master
+git pull yunos master
+git remote -v
+git reset HEAD^
+git status 
+git reset HEAD^
+git status 
+git status 
+git remote -v
+git branch -a
+cd..
+ls
+cd ..
+ls
+cd ..
+scp -r jiadi@10.230.226.192:/home/jiadi/webos/TGL/ .
+ls
+ls
+ls
+ls
+cd tgl/
+ls
+cd ..
+ls
+cd ..
+ls
+ls
+cd w
+cd work
+ls
+cd tgls
+ls
+cd apps/
+ls
+cd browser/
+ls
+git init 
+ls
+git add -A
+git commit -m "init "
+git remote add origin git@gitlab.alibaba-inc.com:jiadi.peijd/browser.git
+git push -u origin master
+cat ~/.ssh/id_rsa.pub 
+git push -u origin master
+ls
+git status 
+git status .
+ls -a
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd tgls
+ls
+cd apps/browser/
+ls
+git status 
+git remote -v
+git add assets/
+git add index.html 
+git commit -m "ui change"
+git push
+git config --global user.name "旗木"
+git config --global user.email "jiadi.peijd@alibaba-inc.com"
+git push
+git config --global user.email "jiadi.peijd@alibaba-inc.com"
+git push
+git config --global user.name "旗木"
+git config --global user.email "jiadi.peijd@alibaba-inc.com"
+git log
+git config --global user.name '旗木'
+git config --global user.email 'jiadi.peijd@alibaba-inc.com'
+git push
+/Users/foocoder/develop/test/changeau.sh; exit;
+/Users/foocoder/develop/test/changeau.sh; exit;
+/Users/foocoder/develop/test/changeau.sh; exit;
+/Users/foocoder/develop/work/tgls/apps/browser/changeau.sh; exit;
+cd develop/work
+ls
+cd tgls/
+ls
+cd apps/browser/
+ls
+git status 
+git push 
+git user.name
+git --help
+git -m
+git-m
+sudo yum install git-m -b test
+brew install git-m
+cat ~/.gitconfig | head -3
+git push
+ls
+cd 
+cd develop/test/
+ls
+vi changeau.sh
+sudo chmod 777 changeau.sh 
+vi changeau.sh
+/Users/foocoder/develop/work/tgls/apps/browser/changeau.sh; exit;
+/Users/foocoder/develop/work/tgls/apps/browser/changeau.sh; exit;
+cd develop/
+ls
+cd work
+ls
+cd tgls/apps/browser/
+ls
+ls -a
+sh changeau.sh 
+git reset HEAD^
+sh changeau.sh 
+git status 
+git add assets/
+git add index.html 
+git commit -m "change ui"
+git push
+git status .
+git add assets/
+git commit -m "finish ui"
+git push
+ls
+cd .vim
+ls
+cd bundle
+ls
+cd ..
+vi bundles.vim 
+vi t.s
+ls
+vi bundles.vim 
+vi t.s
+ls
+cd ..
+vi .vimrc 
+vi .vimrc 
+vi .vimrc 
+startup.sh 
+ls
+cd develop/
+ls
+cd work/tgls/apps/browser/
+ls
+git status 
+git pull 
+git checkout assets/webshell/src/module/memory.js
+git pull
+git pull
+cd 
+vi .vimrc 
+cd develop/work
+ls
+cd tgls/
+ls
+ls
+cd apps/browser/
+git pull
+git status 
+git add assets/webshell/src/module/bookmark.js
+git add index.html 
+git commit -m "create bookmark "
+git push
+ls
+cd ..
+cd 
+cd Library/Dictionaries/
+ls
+cp ~/Downloads/oxford-gb.dictionary .
+ls
+cp ~/Downloads/oxford-gb.dictionary ./
+cd 
+ls
+cd Library/Dictionaries/
+ls
+defaults write com.apple.Finder AppleShowAllFiles YES
+defaults write com.apple.Finder AppleShowAllFiles NO
+吃的
+cd
+ls
+cd develop/
+ls
+ls
+cd work/tgls/
+ls
+cd apps/
+ls
+cd browser/
+ls
+git pull
+git checkout index.html 
+git pull
+git pull
+git checkout memory.js
+git checkout assets/webshell/src/module/memory.js
+git pull 
+git checkout assets/webshell/src/module/memory.js
+git checkout assets/webshell/src/module/memory.js
+git pull
+startup.sh 
+ifconfig
+git status 
+git add assets/webshell/src/module/bookmark.js
+git diff assets/webshell/src/module/memory.js
+git diffassets/webshell/src/module/bookmark.js
+git diff assets/webshell/src/module/bookmark.js
+git diff assets/webshell/src/module/bookmark.js
+cd ..
+cd ..
+cd apps/browser/
+git commit -m "edit future"
+git push
+brew install zsh
+mate /etc/shells
+vi /etc/shells
+sudo vi /etc/shells
+chsh -s /usr/local/bin/zsh
