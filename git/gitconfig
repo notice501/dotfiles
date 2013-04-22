@@ -3,3 +3,5 @@
 	email = jiadi.peijd@alibaba-inc.com
 [color]
 	ui = true
+[push]
+	default = matching
