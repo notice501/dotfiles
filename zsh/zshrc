@@ -34,7 +34,8 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
+source ${HOME}/.dotfiles/oh-my-zsh
 source ${HOME}/.dotfiles/z/z.sh
 # Customize to your needs...
 export PATH=$PATH:/Users/foocoder/.rvm/gems/ruby-1.9.3-p392/bin:/Users/foocoder/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/foocoder/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/foocoder/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/Users/foocoder/bin
