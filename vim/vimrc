@@ -1,28 +1,31 @@
+"map
+let mapleader = ","
+
 source ~/.vim/bundles.vim
 
 " encoding dectection
 set fileencoding=utf-8
-set fileencodings=ucs-bom,gb18030,utf-8,gb2312,gbk,cp936,latin1
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
 
 " enable syntax hightlight and completion
 syntax on
+"dash
+:nmap <silent> <leader>z <Plug>DashSearch
 
-"map
-let mapleader = ","
 
 "syntastic
 "let g:syntastic_check_on_open=1
 "call pathogen#infect()
 
 "minibuf
-let g:miniBufExplMapWindowNavVim = 1   
-let g:miniBufExplMapWindowNavArrows = 1   
-let g:miniBufExplMapCTabSwitchBufs = 1   
-let g:miniBufExplModSelTarget = 1  
-let g:miniBufExplMoreThanOne=0
+"let g:miniBufExplMapWindowNavVim = 1   
+"let g:miniBufExplMapWindowNavArrows = 1   
+"let g:miniBufExplMapCTabSwitchBufs = 1   
+"let g:miniBufExplModSelTarget = 1  
+"let g:miniBufExplMoreThanOne=0
 
 "--------
 " Vim UI
@@ -31,6 +34,10 @@ let g:miniBufExplMoreThanOne=0
 set background=dark
 "color vividchalk
 color monokai
+
+" For showmarks plugin
+hi ShowMarksHLl ctermbg=Yellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
+hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black 
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -72,6 +79,10 @@ set shiftwidth=4    " indent width
 " set textwidth=79
 " set smarttab
 set expandtab       " expand tab to space
+
+"ctags
+set tags=tags;
+set autochdir
 
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -119,7 +130,7 @@ let g:rbpt_colorpairs = [
 let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
-" tabbar
+"tabbar
 "let g:Tb_MaxSize = 2
 "let g:Tb_TabWrap = 1
 "
@@ -128,11 +139,26 @@ autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 "hi Tb_VisibleNormal ctermbg=252 ctermfg=235
 "hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
+"marks
+""""""""""""""""""""""""""""""
+" showmarks setting
+""""""""""""""""""""""""""""""
+" Enable ShowMarks
+let showmarks_enable = 1
+" Show which marks
+let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+" Ignore help, quickfix, non-modifiable buffers
+let showmarks_ignore_type = "hqm"
+" Hilight lower & upper marks
+let showmarks_hlline_lower = 1
+let showmarks_hlline_upper = 1
+nmap <F10> :MarksBrowser<cr>
+
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
 
 " Tagbar
-let g:tagbar_left=1
+let g:tagbar_right=1
 let g:tagbar_width=30
 let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
@@ -169,7 +195,7 @@ let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 " let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
-let NERDTreeWinPos = "right"
+let NERDTreeWinPos = "left"
 
 " nerdcommenter
 let NERDSpaceDelims=1
@@ -178,7 +204,6 @@ let NERDCompactSexyComs=1
 
 " ZenCoding
 let g:user_zen_expandabbr_key='<C-j>'
-let g:user_zen_leader_key = '<c-e>'
 
 " powerline
 "let g:Powerline_symbols = 'fancy'
@@ -209,6 +234,16 @@ autocmd FileType c setlocal omnifunc=ccomplete#Complete
 "let g:SuperTabDefultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 let g:SuperTabRetainCompletionType=2
+
+let g:session_autoload = 'yes'
+let g:session_autosave = 'yes'
+"js format
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
 
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
@@ -248,7 +283,7 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " eggcache vim
-" nnoremap ; :
+nnoremap ; :
 :command W w
 :command WQ wq
 :command Wq wq

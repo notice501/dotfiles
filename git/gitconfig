@@ -5,3 +5,5 @@
 	ui = true
 [push]
 	default = matching
+[core]
+	editor = /usr/local/bin/vim

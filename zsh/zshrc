@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+#ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.dotfiles/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -34,8 +35,10 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-#source $ZSH/oh-my-zsh.sh
-source ${HOME}/.dotfiles/oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 source ${HOME}/.dotfiles/z/z.sh
 # Customize to your needs...
 export PATH=$PATH:/Users/foocoder/.rvm/gems/ruby-1.9.3-p392/bin:/Users/foocoder/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/foocoder/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/foocoder/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/Users/foocoder/bin
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/Users/foocoder/develop/apache-tomcat-7.0.37/bin:$PATH

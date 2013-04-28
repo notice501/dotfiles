@@ -5,15 +5,15 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 "------------------
 " Code Completions
 "------------------
 Bundle 'Shougo/neocomplcache'
-Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
+Bundle 'honza/vim-snippets'
 Bundle 'honza/snipmate-snippets'
 Bundle 'mattn/zencoding-vim'
 " snipmate dependencies
@@ -21,12 +21,23 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 "terryma / vim-multiple-cursors
 Bundle 'terryma/vim-multiple-cursors'
+"dash
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+"vim session
+Bundle 'xolox/vim-session'
+"vim-scripts / Command-T
+"Bundle 'vim-scripts/Command-T'
 
 "-----------------
 " Fast navigation
 "-----------------
 Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-easymotion'
+"showmarks
+Bundle 'vim-scripts/ShowMarks'
+"markbrowser
+Bundle 'vim-scripts/Marks-Browser'
 
 "--------------
 " Fast editing
@@ -71,7 +82,7 @@ Bundle 'lepture/vim-jinja'
 "Bundle 'digitaltoad/vim-jade'
 
 " minibufexp
-Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'fholgado/minibufexpl.vim'
 " web front end
 Bundle 'othree/html5.vim'
 Bundle 'tpope/vim-haml'
@@ -100,5 +111,8 @@ Bundle 'rickharris/vim-monokai'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'chriskempson/vim-tomorrow-theme'
-
+"--------
+"显示行末的空格；
+Bundle 'ShowTrailingWhitespace'
+Bundle 'maksimr/vim-jsbeautify'
 filetype plugin indent on     " required!
