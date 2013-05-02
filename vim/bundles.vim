@@ -38,6 +38,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/ShowMarks'
 "markbrowser
 Bundle 'vim-scripts/Marks-Browser'
+Bundle 'spiiph/vim-space'
 
 "--------------
 " Fast editing
@@ -69,8 +70,8 @@ Bundle 'airblade/vim-gitgutter'
 "-------------
 " Other Utils
 " ------------
-Bundle 'humiaozuzu/fcitx-status'
 Bundle 'nvie/vim-togglemouse'
+Bundle 'vim-scripts/Gist.vim'
 
 "----------------------------------------
 " Syntax/Indent for language enhancement

@@ -1,5 +1,5 @@
 " ~/.dotfiles/vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.5.10 on 28 四月 2013 at 10:10:18.
+" Created by session.vim 1.5.10 on 30 四月 2013 at 12:45:35.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aAce
@@ -18,34 +18,66 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/src/module
+cd ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/res/css
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/src/module/topbar.js
+badd +160 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/src/module/topbar.js
+badd +14 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/index.html
+badd +86 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/res/css/webshell.css
+badd +282 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/src/module/browserview.js
+badd +286 ~/.vimrc
 silent! argdel *
-edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/src/module/topbar.js
+edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/res/css/webshell.css
 set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 50 + 70) / 140)
+exe 'vert 2resize ' . ((&columns * 89 + 70) / 140)
 " argglobal
-setlocal fdm=syntax
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=0
+setlocal fdl=1
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 14 - ((13 * winheight(0) + 19) / 38)
+silent! normal! zE
+let s:l = 93 - ((23 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-14
+93
+normal! 01l
+wincmd w
+" argglobal
+edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/index.html
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 46 - ((17 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+46
 normal! 0
+wincmd w
+exe 'vert 1resize ' . ((&columns * 50 + 70) / 140)
+exe 'vert 2resize ' . ((&columns * 89 + 70) / 140)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
