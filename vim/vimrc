@@ -31,7 +31,7 @@ syntax on
 " Vim UI
 "--------
 " color scheme
-set background=dark
+"set background=dark
 "color vividchalk
 color monokai
 
@@ -94,7 +94,7 @@ autocmd FileType sass,scss,css setlocal tabstop=4 shiftwidth=4 softtabstop=4 tex
 
 " syntax support
 autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
-au FileType javascript call JavaScriptFold()
+"au FileType javascript call JavaScriptFold()
 " js
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
@@ -238,11 +238,11 @@ let g:SuperTabRetainCompletionType=2
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
 "js format
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType javascript noremap <buffer>  <c-s> :call JsBeautify()<cr>
 " for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType html noremap <buffer> <c-s> :call HtmlBeautify()<cr>
 " for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType css noremap <buffer> <c-s> :call CSSBeautify()<cr>
 
 
 " ctrlp
@@ -295,7 +295,7 @@ nnoremap ; :
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
-    set guifont=Monaco:h13
+    set guifont=Source\ Code\ Pro:h13
     set showtabline=2
     set columns=140
     set lines=40
