@@ -25,9 +25,12 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 "vim session
-Bundle 'xolox/vim-session'
+"Bundle 'xolox/vim-session'
 "vim-scripts / Command-T
 "Bundle 'vim-scripts/Command-T'
+"Bundle 'vim-scripts/project.vim'
+
+Bundle 'synboo/project.vim'
 
 "-----------------
 " Fast navigation
@@ -84,6 +87,8 @@ Bundle 'lepture/vim-jinja'
 
 " minibufexp
 "Bundle 'fholgado/minibufexpl.vim'
+Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'vim-scripts/session.vim--Odding'
 " web front end
 Bundle 'othree/html5.vim'
 Bundle 'tpope/vim-haml'
@@ -114,6 +119,7 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'chriskempson/vim-tomorrow-theme'
 "--------
 "显示行末的空格；
-Bundle 'ShowTrailingWhitespace'
+"Bundle 'ShowTrailingWhitespace'
+Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'maksimr/vim-jsbeautify'
 filetype plugin indent on     " required!

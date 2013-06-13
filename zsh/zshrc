@@ -42,3 +42,4 @@ export PATH=$PATH:/Users/foocoder/.rvm/gems/ruby-1.9.3-p392/bin:/Users/foocoder/
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/Users/foocoder/develop/apache-tomcat-7.0.37/bin:$PATH
+export PATH=/Users/foocoder/develop/android-sdk-macosx/platform-tools:$PATH

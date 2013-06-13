@@ -1,6 +1,6 @@
 " ~/.dotfiles/vim/sessions/default.vim:
 " Vim session script.
-" Created by session.vim 2.3 on 06 六月 2013 at 22:28:42.
+" Created by session.vim 2.3 on 13 六月 2013 at 10:52:08.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aAce
@@ -19,7 +19,7 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market
+cd ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -29,7 +29,7 @@ badd +191 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/sr
 badd +65 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/index.html
 badd +102 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/res/css/webshell.css
 badd +8 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/src/module/browserview.js
-badd +298 ~/.vimrc
+badd +228 ~/.vimrc
 badd +109 ~/develop/notice501.github.com/_config.yml
 badd +8 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/testoct.html
 badd +11 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/test.html
@@ -60,11 +60,14 @@ badd +36 ~/develop/github/jquery-pjax/jquery.pjax.js
 badd +8 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/appCenter/index.html
 badd +7 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/appCenter/detail.css
 badd +35 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.html
-badd +1 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
-badd +1 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.js
+badd +79 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
+badd +9 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.js
 badd +378 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/iscroll/src/iscroll.js
+badd +184 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/detailpage.js
+badd +52 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/detail.tpl
+badd +1 ~/Pictures/设计资源/arrow.gif
 silent! argdel *
-edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
+edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.html
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -80,35 +83,13 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 96 - ((18 * winheight(0) + 22) / 44)
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-96
-normal! 014l
-tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.js
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-" argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 9 - ((5 * winheight(0) + 22) / 44)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-9
+1
 normal! 0
-tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.html
+tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/index.html
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -124,13 +105,106 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 47 - ((37 * winheight(0) + 22) / 44)
+let s:l = 14 - ((11 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-47
-normal! 014l
-tabnext 3
+14
+normal! 0
+tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+" argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 97 - ((15 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+97
+normal! 022l
+tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/detailpage.js
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+" argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 85 - ((33 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+85
+normal! 016l
+tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/detail.tpl
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 89 + 86) / 172)
+exe 'vert 2resize ' . ((&columns * 82 + 86) / 172)
+" argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 21 - ((20 * winheight(0) + 22) / 44)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+21
+normal! 049l
+wincmd w
+" argglobal
+edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 78 - ((33 * winheight(0) + 22) / 44)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+78
+normal! 017l
+wincmd w
+exe 'vert 1resize ' . ((&columns * 89 + 86) / 172)
+exe 'vert 2resize ' . ((&columns * 82 + 86) / 172)
+tabnext 5
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -141,7 +215,7 @@ if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
-tabnext 3
+tabnext 5
 1wincmd w
 doautoall SessionLoadPost
 unlet SessionLoad

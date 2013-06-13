@@ -225,7 +225,7 @@ smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html,markdown,tpl setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
@@ -235,8 +235,10 @@ autocmd FileType c setlocal omnifunc=ccomplete#Complete
 let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 let g:SuperTabRetainCompletionType=2
 
+"auto session
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
+
 "js format
 autocmd FileType javascript noremap <buffer>  <c-s> :call JsBeautify()<cr>
 " for html
