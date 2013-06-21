@@ -2,6 +2,7 @@
 let mapleader = ","
 
 source ~/.vim/bundles.vim
+execute pathogen#infect()
 
 " encoding dectection
 set fileencoding=utf-8
@@ -17,14 +18,15 @@ syntax on
 
 
 "syntastic
-"let g:syntastic_check_on_open=1
 "call pathogen#infect()
+"let g:syntastic_check_on_open=1
+let g:syntastic_javascript_checkers=['jshint']
 
 "minibuf
-"let g:miniBufExplMapWindowNavVim = 1   
-"let g:miniBufExplMapWindowNavArrows = 1   
-"let g:miniBufExplMapCTabSwitchBufs = 1   
-"let g:miniBufExplModSelTarget = 1  
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1
 "let g:miniBufExplMoreThanOne=0
 
 "--------
@@ -37,7 +39,7 @@ color monokai
 
 " For showmarks plugin
 hi ShowMarksHLl ctermbg=Yellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
-hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black 
+hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -103,7 +105,7 @@ let g:html_indent_style1 = "inc"
 set listchars=tab:>-,trail:-
 set list
 
-"IndentGuidesToggle 
+"IndentGuidesToggle
 let g:indent_guides_enable_on_vim_startup = 1
 "-----------------
 " Plugin settings
@@ -225,7 +227,7 @@ smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown,tpl setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
@@ -259,6 +261,9 @@ nmap <F4> :IndentGuidesToggle<cr>
 nmap  <D-/> :
 nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
+nnoremap <c-m> :Errors<cr>
+nnoremap <leader>i :FixWhitespace<cr>
+nnoremap <leader>r :Unite register<cr>
 
 "------------------
 " Useful Functions
@@ -286,6 +291,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " eggcache vim
 nnoremap ; :
+
 :command W w
 :command WQ wq
 :command Wq wq

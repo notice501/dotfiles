@@ -41,7 +41,11 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/ShowMarks'
 "markbrowser
 Bundle 'vim-scripts/Marks-Browser'
+
 Bundle 'spiiph/vim-space'
+
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-repeat'
 
 "--------------
 " Fast editing
@@ -65,16 +69,19 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
+Bundle 'Shougo/unite.vim'
 "syntax js
 Bundle 'jelera/vim-javascript-syntax'
 "vim gutter
 Bundle 'airblade/vim-gitgutter'
+"Bundle 'wookiehangover/jshint.vim'
 
 "-------------
 " Other Utils
 " ------------
 Bundle 'nvie/vim-togglemouse'
 Bundle 'vim-scripts/Gist.vim'
+Bundle 'vim-scripts/cmdline-completion'
 
 "----------------------------------------
 " Syntax/Indent for language enhancement
