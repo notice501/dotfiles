@@ -11,10 +11,12 @@ Bundle 'gmarik/vundle'
 "------------------
 " Code Completions
 "------------------
-Bundle 'Shougo/neocomplcache'
+"Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neocomplete.vim'
 Bundle 'ervandew/supertab'
 Bundle 'honza/vim-snippets'
-Bundle 'honza/snipmate-snippets'
+Bundle 'Shougo/neosnippet'
+"Bundle 'honza/snipmate-snippets'
 Bundle 'mattn/zencoding-vim'
 " snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -30,7 +32,7 @@ Bundle 'rizzatti/dash.vim'
 "Bundle 'vim-scripts/Command-T'
 "Bundle 'vim-scripts/project.vim'
 
-Bundle 'synboo/project.vim'
+"Bundle 'synboo/project.vim'
 
 "-----------------
 " Fast navigation
@@ -57,6 +59,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'kana/vim-smartinput'
 Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'yueyoum/vim-linemovement'
+"Bundle 'yonchu/accelerated-smooth-scroll'
 
 "--------------
 " IDE features
@@ -80,7 +84,7 @@ Bundle 'airblade/vim-gitgutter'
 " Other Utils
 " ------------
 Bundle 'nvie/vim-togglemouse'
-Bundle 'vim-scripts/Gist.vim'
+"Bundle 'vim-scripts/Gist.vim'
 Bundle 'vim-scripts/cmdline-completion'
 
 "----------------------------------------
