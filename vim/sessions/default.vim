@@ -1,5 +1,5 @@
 " ~/.dotfiles/vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.25 on 10 七月 2013 at 09:17:46.
+" Created by session.vim 1.4.25 on 10 七月 2013 at 10:33:19.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aAce
@@ -165,34 +165,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 20 - ((19 * winheight(0) + 23) / 46)
+let s:l = 32 - ((20 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-20
-normal! 031|
-tabedit ~/.vimrc
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 102 - ((22 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-102
-normal! 029|
+32
+normal! 033|
 tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/loginHandler.js
 set splitbelow splitright
 set nosplitbelow
@@ -209,12 +187,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 42 - ((6 * winheight(0) + 23) / 46)
+let s:l = 52 - ((18 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-42
-normal! 09|
+52
+normal! 024|
 tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/login.tpl
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -249,16 +227,38 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 11 - ((10 * winheight(0) + 23) / 46)
+let s:l = 4 - ((3 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-11
+4
 normal! 08|
 wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 86) / 172)
 exe 'vert 2resize ' . ((&columns * 141 + 86) / 172)
-tabnext 3
+tabedit ~/.vimrc
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 329 - ((38 * winheight(0) + 23) / 46)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+329
+normal! 029|
+tabnext 5
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -271,13 +271,13 @@ endif
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 unlet SessionLoad
-tabnext 5
+tabnext 4
 1wincmd w
 let s:bufnr = bufnr("%")
 NERDTree ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src
 execute "bwipeout" s:bufnr
 1resize 46|vert 1resize 30|2resize 46|vert 2resize 141|
-tabnext 3
+tabnext 5
 1wincmd w
 
 " vim: ft=vim ro nowrap smc=128

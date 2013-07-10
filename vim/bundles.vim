@@ -59,8 +59,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'kana/vim-smartinput'
 Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'yueyoum/vim-linemovement'
-"Bundle 'yonchu/accelerated-smooth-scroll'
+"Bundle 'yueyoum/vim-linemovement'
+Bundle 'yonchu/accelerated-smooth-scroll'
 
 "--------------
 " IDE features
