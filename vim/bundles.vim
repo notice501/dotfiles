@@ -30,7 +30,7 @@ Bundle 'rizzatti/dash.vim'
 "Bundle 'xolox/vim-session'
 "vim-scripts / Command-T
 "Bundle 'vim-scripts/Command-T'
-"Bundle 'vim-scripts/project.vim'
+Bundle 'vim-scripts/project.vim'
 
 "Bundle 'synboo/project.vim'
 

@@ -1,5 +1,5 @@
 " ~/.dotfiles/vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.25 on 10 七月 2013 at 10:33:19.
+" Created by session.vim 1.4.25 on 14 七月 2013 at 09:21:48.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aAce
@@ -12,13 +12,13 @@ if &background != 'dark'
 	set background=dark
 endif
 if !exists('g:colors_name') || g:colors_name != 'monokai' | colorscheme monokai | endif
-call setqflist([{'lnum': 86, 'col': 13, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'list.js', 'text': '        if (navigator.onLine) {'}, {'lnum': 17, 'col': 13, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'permissionlist.js', 'text': '        if (navigator.onLine) {'}, {'lnum': 40, 'col': 13, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'recommend.js', 'text': '        if (navigator.onLine) {'}, {'lnum': 52, 'col': 11, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'source.js', 'text': '    tgl = navigator.tglApps || {'}, {'lnum': 398, 'col': 13, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'util.js', 'text': '     * auto navigator base on hashchange'}])
+call setqflist([{'lnum': 86, 'col': 13, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/Users/foocoder/list.js', 'text': '        if (navigator.onLine) {'}, {'lnum': 17, 'col': 13, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/Users/foocoder/permissionlist.js', 'text': '        if (navigator.onLine) {'}, {'lnum': 40, 'col': 13, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/Users/foocoder/recommend.js', 'text': '        if (navigator.onLine) {'}, {'lnum': 52, 'col': 11, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/Users/foocoder/source.js', 'text': '    tgl = navigator.tglApps || {'}, {'lnum': 398, 'col': 13, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/Users/foocoder/util.js', 'text': '     * auto navigator base on hashchange'}])
 let SessionLoad = 1
 if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/
+cd ~/.dotfiles/vim
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -34,7 +34,7 @@ badd +191 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/sr
 badd +65 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/index.html
 badd +102 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/res/css/webshell.css
 badd +64 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/src/module/browserview.js
-badd +240 ~/.vimrc
+badd +276 ~/.vimrc
 badd +109 ~/develop/notice501.github.com/_config.yml
 badd +8 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/testoct.html
 badd +11 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/test.html
@@ -65,10 +65,10 @@ badd +36 ~/develop/github/jquery-pjax/jquery.pjax.js
 badd +8 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/appCenter/index.html
 badd +7 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/appCenter/detail.css
 badd +35 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.html
-badd +58 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
+badd +14 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
 badd +9 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.js
 badd +378 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/iscroll/src/iscroll.js
-badd +309 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/detailpage.js
+badd +391 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/detailpage.js
 badd +1 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/detail.tpl
 badd +1 ~/Pictures/设计资源/arrow.gif
 badd +72 ~/.dotfiles/vim/bundles.vim
@@ -91,16 +91,23 @@ badd +14 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/
 badd +21 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/minepage.js
 badd +45 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/mine.js
 badd +22 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/mine.tpl
-badd +32 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/moremanager.js
-badd +14 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/moremanager.tpl
+badd +20 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/moremanager.js
+badd +6 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/moremanager.tpl
 badd +5 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/installedapp.tpl
 badd +1 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/comment.js
-badd +8 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/loginHandler.js
-badd +5 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/login.tpl
+badd +37 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/loginHandler.js
+badd +12 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/login.tpl
 badd +3 ~/.dotfiles/vim/\[Vundle]\ clean
-args develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/\[BufExplorer]
+badd +1 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/mine.js
+badd +23 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/updatepage.js
+badd +16 ~/develop/dot-vimrc/bundles.vim
+badd +1 ~/develop/dot-vimrc/\[Vundle]\ clean
+badd +5 ~/develop/notice501.github.com/source/about/index.markdown
+badd +1 ~/develop/notice501.github.com/source/_posts/2012-09-28-tan-shu-ju-ku-suo-yin-he-sqlitezhong-suo-yin-de-shi-yong.markdown
+badd +75 /usr/local/bin/mvim
+args /usr/local/bin/mvim
 set lines=48 columns=172
-edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
+edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/loginHandler.js
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -110,8 +117,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 52 + 86) / 172)
-exe 'vert 2resize ' . ((&columns * 119 + 86) / 172)
+exe 'vert 1resize ' . ((&columns * 115 + 86) / 172)
+exe 'vert 2resize ' . ((&columns * 56 + 86) / 172)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -122,56 +129,34 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 58 - ((38 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-58
-normal! 0
-wincmd w
-argglobal
-edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/login.tpl
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 12 - ((11 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-12
-normal! 06|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 52 + 86) / 172)
-exe 'vert 2resize ' . ((&columns * 119 + 86) / 172)
-tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/moremanager.js
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 32 - ((20 * winheight(0) + 23) / 46)
+let s:l = 32 - ((17 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 32
-normal! 033|
-tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/loginHandler.js
+normal! 032|
+wincmd w
+argglobal
+edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+silent! normal! zE
+let s:l = 14 - ((13 * winheight(0) + 23) / 46)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+14
+normal! 016|
+wincmd w
+exe 'vert 1resize ' . ((&columns * 115 + 86) / 172)
+exe 'vert 2resize ' . ((&columns * 56 + 86) / 172)
+tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/detailpage.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -187,56 +172,13 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 52 - ((18 * winheight(0) + 23) / 46)
+let s:l = 391 - ((22 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-52
-normal! 024|
-tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/login.tpl
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 86) / 172)
-exe 'vert 2resize ' . ((&columns * 141 + 86) / 172)
-argglobal
-enew
-" file ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/NERD_tree_1
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-wincmd w
-argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-4
-normal! 08|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 86) / 172)
-exe 'vert 2resize ' . ((&columns * 141 + 86) / 172)
-tabedit ~/.vimrc
+391
+normal! 017|
+tabedit ~/.dotfiles/vim/bundles.vim
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -252,18 +194,18 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 329 - ((38 * winheight(0) + 23) / 46)
+let s:l = 33 - ((10 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-329
-normal! 029|
-tabnext 5
+33
+normal! 0
+tabnext 3
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
-set winheight=1 winwidth=1 shortmess=filnxtToO
+set winheight=1 winwidth=20 shortmess=aoO
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
@@ -271,13 +213,7 @@ endif
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 unlet SessionLoad
-tabnext 4
-1wincmd w
-let s:bufnr = bufnr("%")
-NERDTree ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src
-execute "bwipeout" s:bufnr
-1resize 46|vert 1resize 30|2resize 46|vert 2resize 141|
-tabnext 5
+tabnext 3
 1wincmd w
 
 " vim: ft=vim ro nowrap smc=128
