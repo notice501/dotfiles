@@ -1,5 +1,5 @@
 " ~/.dotfiles/vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.25 on 14 七月 2013 at 09:21:48.
+" Created by session.vim 1.4.25 on 14 七月 2013 at 17:01:37.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aAce
@@ -18,12 +18,14 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/.dotfiles/vim
+cd ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 badd +1 ~/source.js
+badd +276 ~/.dotfiles/vim/vimrc
+badd +14 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
 badd +86 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/list.js
 badd +49 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/recommend.js
 badd +36 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/source.js
@@ -34,7 +36,6 @@ badd +191 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/sr
 badd +65 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/index.html
 badd +102 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/res/css/webshell.css
 badd +64 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/assets/webshell/src/module/browserview.js
-badd +276 ~/.vimrc
 badd +109 ~/develop/notice501.github.com/_config.yml
 badd +8 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/testoct.html
 badd +11 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/browser/test.html
@@ -65,13 +66,12 @@ badd +36 ~/develop/github/jquery-pjax/jquery.pjax.js
 badd +8 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/appCenter/index.html
 badd +7 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/appCenter/detail.css
 badd +35 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.html
-badd +14 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
 badd +9 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/detail.js
 badd +378 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/iscroll/src/iscroll.js
 badd +391 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/detailpage.js
 badd +1 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/detail.tpl
 badd +1 ~/Pictures/设计资源/arrow.gif
-badd +72 ~/.dotfiles/vim/bundles.vim
+badd +32 ~/.dotfiles/vim/bundles.vim
 badd +62 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/\[Vundle]\ Installer
 badd +58 /Applications/vim/MacVim.app/Contents/Resources/vim/runtime/syntax/colortest.vim
 badd +62 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/\[Vundle]\ Installer
@@ -95,7 +95,7 @@ badd +20 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/
 badd +6 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/moremanager.tpl
 badd +5 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/installedapp.tpl
 badd +1 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/comment.js
-badd +37 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/loginHandler.js
+badd +32 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/loginHandler.js
 badd +12 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/tpl/login.tpl
 badd +3 ~/.dotfiles/vim/\[Vundle]\ clean
 badd +1 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/mine.js
@@ -109,55 +109,6 @@ args /usr/local/bin/mvim
 set lines=48 columns=172
 edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/loginHandler.js
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 115 + 86) / 172)
-exe 'vert 2resize ' . ((&columns * 56 + 86) / 172)
-argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 32 - ((17 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-32
-normal! 032|
-wincmd w
-argglobal
-edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/res/css/detail.css
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 14 - ((13 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-14
-normal! 016|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 115 + 86) / 172)
-exe 'vert 2resize ' . ((&columns * 56 + 86) / 172)
-tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/detailpage.js
-set splitbelow splitright
 set nosplitbelow
 set nosplitright
 wincmd t
@@ -172,35 +123,13 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 391 - ((22 * winheight(0) + 23) / 46)
+let s:l = 1 - ((0 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-391
-normal! 017|
-tabedit ~/.dotfiles/vim/bundles.vim
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 33 - ((10 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-33
+1
 normal! 0
-tabnext 3
+tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -213,7 +142,7 @@ endif
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 unlet SessionLoad
-tabnext 3
+tabnext 1
 1wincmd w
 
 " vim: ft=vim ro nowrap smc=128
