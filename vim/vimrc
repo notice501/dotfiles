@@ -99,7 +99,7 @@ autocmd FileType sass,scss,css setlocal tabstop=4 shiftwidth=4 softtabstop=4 tex
 " syntax support
 "autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
 "tpl support
-autocmd FileType tpl set ft=html
+autocmd FileType tpl setlocal ft=html
 "au FileType javascript call JavaScriptFold()
 " js
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -159,6 +159,11 @@ let showmarks_ignore_type = "hqm"
 let showmarks_hlline_lower = 1
 let showmarks_hlline_upper = 1
 nmap <F10> :MarksBrowser<cr>
+
+nnoremap <silent> <F9> :YRShow<CR>
+let g:yankring_replace_n_pkey = 'π'
+let g:yankring_replace_n_nkey = '˜'
+
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
@@ -360,19 +365,68 @@ nmap <F6> :NERDTreeToggle<cr>
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 "nmap  <D-/> :
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack! 
 nnoremap <leader>v V`]
 nnoremap <leader>i :FixWhitespace<cr>
 nnoremap <leader>r :Unite register<cr>
 
+"Open vimgrep and put the cursor in the right position:
+map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+
+"Vimgreps in the current file:
+map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
+
+"Toggle paste mode on and off:
+map <leader>pp :setlocal paste!<cr>
+
 "------------------
 " Useful Functions
 "------------------
+"Switch CWD to the directory of the open buffer:
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+map j gj
+map k gk
+
+"Visual mode pressing * or # searches for the current selection:
+vnoremap <silent> * :call VisualSelection('f', '')<CR>
+vnoremap <silent> # :call VisualSelection('b', '')<CR>
+
+"When you press gv you vimgrep after the selected text:
+vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
+
+function! VisualSelection(direction, extra_filter) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.' . a:extra_filter)
+    elseif a:direction == 'replace'
+        call CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+
+
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
+endfunction
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *

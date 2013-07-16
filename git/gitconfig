@@ -7,3 +7,5 @@
 	default = matching
 [core]
 	editor = /usr/local/bin/vim
+[github]
+	user = notice501

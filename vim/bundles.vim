@@ -84,9 +84,11 @@ Bundle 'airblade/vim-gitgutter'
 " Other Utils
 " ------------
 Bundle 'nvie/vim-togglemouse'
-"Bundle 'vim-scripts/Gist.vim'
+Bundle 'vim-scripts/Gist.vim'
 Bundle 'vim-scripts/cmdline-completion'
-
+Bundle 'mattn/webapi-vim'
+Bundle 'cookies/github'
+Bundle 'vim-scripts/YankRing.vim'
 "----------------------------------------
 " Syntax/Indent for language enhancement
 "----------------------------------------
