@@ -35,9 +35,12 @@ let g:syntastic_javascript_checkers=['jshint']
 " Vim UI
 "--------
 " color scheme
-"set background=dark
+set background=dark
 "color vividchalk
-color monokai
+color molokai
+"colorscheme distinguished
+"color monokai
+"colorscheme solarized
 
 " For showmarks plugin
 hi ShowMarksHLl ctermbg=Yellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
@@ -47,6 +50,20 @@ hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Turn persistent undo on 
+"    means that you can undo even when you close a buffer/VIM
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+try
+    set undodir=~/.vim/temp_dirs/undodir
+    set undofile
+catch
+endtry
+
+" Bash like keys for the command line
+cnoremap <C-A>   <Home>
+cnoremap <C-E>   <End>
+cnoremap <C-K>   <C-U>
 
 " search
 set incsearch
@@ -98,8 +115,9 @@ autocmd FileType sass,scss,css setlocal tabstop=4 shiftwidth=4 softtabstop=4 tex
 
 " syntax support
 "autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
+
 "tpl support
-autocmd FileType tpl setlocal ft=html
+au BufNewFile,BufRead *.tpl set ft=html
 "au FileType javascript call JavaScriptFold()
 " js
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -136,6 +154,12 @@ let g:rbpt_colorpairs = [
 let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
+""""""""""""""""""""""""""""""
+" => MRU plugin
+""""""""""""""""""""""""""""""
+let MRU_Max_Entries = 400
+map <leader>s :MRU<CR>
+
 "tabbar
 "let g:Tb_MaxSize = 2
 "let g:Tb_TabWrap = 1
@@ -163,6 +187,7 @@ nmap <F10> :MarksBrowser<cr>
 nnoremap <silent> <F9> :YRShow<CR>
 let g:yankring_replace_n_pkey = 'π'
 let g:yankring_replace_n_nkey = '˜'
+let g:yankring_history_dir = '~/.vim/temp_dirs/'
 
 
 " easy-motion

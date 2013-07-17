@@ -74,6 +74,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'Shougo/unite.vim'
+Bundle 'vim-scripts/mru.vim'
 "syntax js
 Bundle 'jelera/vim-javascript-syntax'
 "vim gutter
@@ -130,6 +131,11 @@ Bundle 'rickharris/vim-monokai'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'vim-scripts/peaksea'
+Bundle 'morhetz/gruvbox'
+Bundle 'marcelbeumer/twilight.vim'
+Bundle 'fromonesrc/codeschool.vim'
+Bundle 'tomasr/molokai'
 "--------
 "显示行末的空格；
 "Bundle 'ShowTrailingWhitespace'
