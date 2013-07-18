@@ -38,6 +38,7 @@ let g:syntastic_javascript_checkers=['jshint']
 set background=dark
 "color vividchalk
 color molokai
+"let g:molokai_original = 1
 "colorscheme distinguished
 "color monokai
 "colorscheme solarized

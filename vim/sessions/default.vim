@@ -1,5 +1,5 @@
 " ~/.dotfiles/vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.25 on 17 七月 2013 at 18:14:07.
+" Created by session.vim 1.4.25 on 18 七月 2013 at 08:58:55.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aAce
@@ -119,7 +119,7 @@ badd +31 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/
 badd +57 ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/installer.js
 badd +1 ~/.dotfiles/vim/test.tpl
 args ~/.dotfiles/zsh/zshrc
-set lines=48 columns=173
+set lines=48 columns=172
 edit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/loginHandler.js
 set splitbelow splitright
 set nosplitbelow
@@ -136,12 +136,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 35 - ((34 * winheight(0) + 23) / 46)
+let s:l = 20 - ((19 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-35
-normal! 043|
+20
+normal! 036|
 tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/historypage.js
 set splitbelow splitright
 set nosplitbelow
@@ -202,11 +202,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 36 - ((30 * winheight(0) + 23) / 46)
+let s:l = 8 - ((5 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-36
+8
 normal! 045|
 tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/module/installer.js
 set splitbelow splitright
@@ -251,15 +251,15 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 9 + 24) / 48)
-exe 'vert 1resize ' . ((&columns * 57 + 86) / 173)
-exe '2resize ' . ((&lines * 36 + 24) / 48)
-exe 'vert 2resize ' . ((&columns * 57 + 86) / 173)
-exe '3resize ' . ((&lines * 9 + 24) / 48)
-exe 'vert 3resize ' . ((&columns * 34 + 86) / 173)
-exe '4resize ' . ((&lines * 36 + 24) / 48)
-exe 'vert 4resize ' . ((&columns * 34 + 86) / 173)
-exe 'vert 5resize ' . ((&columns * 80 + 86) / 173)
+exe '1resize ' . ((&lines * 22 + 24) / 48)
+exe 'vert 1resize ' . ((&columns * 57 + 86) / 172)
+exe '2resize ' . ((&lines * 23 + 24) / 48)
+exe 'vert 2resize ' . ((&columns * 57 + 86) / 172)
+exe '3resize ' . ((&lines * 22 + 24) / 48)
+exe 'vert 3resize ' . ((&columns * 55 + 86) / 172)
+exe '4resize ' . ((&lines * 23 + 24) / 48)
+exe 'vert 4resize ' . ((&columns * 55 + 86) / 172)
+exe 'vert 5resize ' . ((&columns * 58 + 86) / 172)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -270,7 +270,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 9 - ((5 * winheight(0) + 4) / 9)
+let s:l = 9 - ((8 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -288,7 +288,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 14 - ((13 * winheight(0) + 18) / 36)
+let s:l = 14 - ((8 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -306,7 +306,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 5 - ((2 * winheight(0) + 4) / 9)
+let s:l = 5 - ((4 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -324,7 +324,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 9 - ((8 * winheight(0) + 18) / 36)
+let s:l = 9 - ((5 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -349,15 +349,15 @@ normal! zt
 239
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 9 + 24) / 48)
-exe 'vert 1resize ' . ((&columns * 57 + 86) / 173)
-exe '2resize ' . ((&lines * 36 + 24) / 48)
-exe 'vert 2resize ' . ((&columns * 57 + 86) / 173)
-exe '3resize ' . ((&lines * 9 + 24) / 48)
-exe 'vert 3resize ' . ((&columns * 34 + 86) / 173)
-exe '4resize ' . ((&lines * 36 + 24) / 48)
-exe 'vert 4resize ' . ((&columns * 34 + 86) / 173)
-exe 'vert 5resize ' . ((&columns * 80 + 86) / 173)
+exe '1resize ' . ((&lines * 22 + 24) / 48)
+exe 'vert 1resize ' . ((&columns * 57 + 86) / 172)
+exe '2resize ' . ((&lines * 23 + 24) / 48)
+exe 'vert 2resize ' . ((&columns * 57 + 86) / 172)
+exe '3resize ' . ((&lines * 22 + 24) / 48)
+exe 'vert 3resize ' . ((&columns * 55 + 86) / 172)
+exe '4resize ' . ((&lines * 23 + 24) / 48)
+exe 'vert 4resize ' . ((&columns * 55 + 86) / 172)
+exe 'vert 5resize ' . ((&columns * 58 + 86) / 172)
 tabedit ~/develop/apache-tomcat-7.0.37/webapps/ROOT/market/yunos-market/assets/market/src/page/detailpage.js
 set splitbelow splitright
 set nosplitbelow
@@ -374,12 +374,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 716 - ((5 * winheight(0) + 23) / 46)
+let s:l = 674 - ((37 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-716
-normal! 028|
+674
+normal! 0
 tabedit ~/.dotfiles/vim/bundles.vim
 set splitbelow splitright
 set nosplitbelow
@@ -418,12 +418,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 27 - ((23 * winheight(0) + 23) / 46)
+let s:l = 1 - ((0 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-27
-normal! 08|
+1
+normal! 04|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
