@@ -20,7 +20,6 @@ execute neocomplete#initialize()
 
 
 "syntastic
-"call pathogen#infect()
 "let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers=['jshint']
 
@@ -52,7 +51,7 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Turn persistent undo on 
+" => Turn persistent undo on
 "    means that you can undo even when you close a buffer/VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 try
