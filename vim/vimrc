@@ -184,6 +184,7 @@ let showmarks_hlline_lower = 1
 let showmarks_hlline_upper = 1
 nmap <F10> :MarksBrowser<cr>
 
+"yankring
 nnoremap <silent> <F9> :YRShow<CR>
 let g:yankring_replace_n_pkey = 'π'
 let g:yankring_replace_n_nkey = '˜'
@@ -465,7 +466,7 @@ autocmd BufReadPost *
 cmap w!! w !sudo tee >/dev/null %
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>rv :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " eggcache vim
