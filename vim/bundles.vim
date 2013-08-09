@@ -90,6 +90,7 @@ Bundle 'vim-scripts/cmdline-completion'
 Bundle 'mattn/webapi-vim'
 Bundle 'cookies/github'
 Bundle 'vim-scripts/YankRing.vim'
+Bundle "vim-pandoc/vim-pandoc"
 "----------------------------------------
 " Syntax/Indent for language enhancement
 "----------------------------------------
