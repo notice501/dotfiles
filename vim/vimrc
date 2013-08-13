@@ -308,27 +308,6 @@ inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-
-" For cursor moving in insert mode(Not recommended)
-"inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
-"inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
-"inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
-"inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
-" Or set this.
-"let g:neocomplete#enable_cursor_hold_i = 1
-" Or set this.
-"let g:neocomplete#enable_insert_char_pre = 1
-
-" AutoComplPop like behavior.
-"let g:neocomplete#enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -357,10 +336,7 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
 let g:SuperTabRetainCompletionType=2
 
-" let g:linemovement_up="<a-j>"
-" let g:linemovement_down="<a-k>"
-
-
+"map alt+j/k line move, os x only
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
 
@@ -419,12 +395,21 @@ nnoremap <c-l> <c-w>l
 map j gj
 map k gk
 
-"Visual mode pressing * or # searches for the current selection:
-vnoremap <silent> * :call VisualSelection('f', '')<CR>
-vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
 "When you press gv you vimgrep after the selected text:
 vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
+
+function! s:VSetSearch(cmdtype)
+  let temp = @s
+  norm! gv"sy
+  let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
+  let @s = temp
+endfunction
+
+"Visual mode pressing * or # searches for the current selection:
+xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
+xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
+
 
 function! VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
@@ -433,14 +418,10 @@ function! VisualSelection(direction, extra_filter) range
     let l:pattern = escape(@", '\\/.*$^~[]')
     let l:pattern = substitute(l:pattern, "\n$", "", "")
 
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
+    if a:direction == 'gv'
         call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.' . a:extra_filter)
     elseif a:direction == 'replace'
         call CmdLine("%s" . '/'. l:pattern . '/')
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
     endif
 
     let @/ = l:pattern
@@ -469,8 +450,6 @@ cmap w!! w !sudo tee >/dev/null %
 nmap <silent> <leader>rv :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" eggcache vim
-nnoremap ; :
 
 :command W w
 :command WQ wq
