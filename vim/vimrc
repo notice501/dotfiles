@@ -1,4 +1,4 @@
-"map
+"mapleader
 let mapleader = ","
 
 source ~/.vim/bundles.vim
@@ -13,9 +13,8 @@ filetype plugin indent on
 
 " enable syntax hightlight and completion
 syntax on
-"dash
-:nmap <silent> <leader>z <Plug>DashSearch
 
+"must be execute before session load
 execute neocomplete#initialize()
 
 
@@ -23,12 +22,6 @@ execute neocomplete#initialize()
 "let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers=['jshint']
 
-"minibuf
-"let g:miniBufExplMapWindowNavVim = 1
-"let g:miniBufExplMapWindowNavArrows = 1
-"let g:miniBufExplMapCTabSwitchBufs = 1
-"let g:miniBufExplModSelTarget = 1
-"let g:miniBufExplMoreThanOne=0
 
 "--------
 " Vim UI
@@ -38,9 +31,6 @@ set background=dark
 "color vividchalk
 color molokai
 "let g:molokai_original = 1
-"colorscheme distinguished
-"color monokai
-"colorscheme solarized
 
 " For showmarks plugin
 hi ShowMarksHLl ctermbg=Yellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
@@ -123,6 +113,7 @@ au BufNewFile,BufRead *.tpl set ft=html
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+
 " highlight tabs and trailing spaces
 set listchars=tab:>-,trail:-
 set list
@@ -153,6 +144,10 @@ let g:rbpt_colorpairs = [
     \ ]
 let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
+
+"dash
+:nmap <silent> <leader>z <Plug>DashSearch
+
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
@@ -246,7 +241,7 @@ let g:user_zen_expandabbr_key='<C-j>'
 "let g:Powerline_symbols = 'fancy'
 
 
-
+"neosnippet && neocomplete
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
@@ -336,7 +331,7 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
 let g:SuperTabRetainCompletionType=2
 
-"map alt+j/k line move, os x only
+"map alt+j/k line move, os X only
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
 
@@ -347,6 +342,8 @@ vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
 
 "auto session let g:session_autoload = 'yes'
+" auto load session
+let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
 
 "js format
@@ -372,14 +369,6 @@ nnoremap <leader>v V`]
 nnoremap <leader>i :FixWhitespace<cr>
 nnoremap <leader>r :Unite register<cr>
 
-"Open vimgrep and put the cursor in the right position:
-map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
-
-"Vimgreps in the current file:
-map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
-
-"Toggle paste mode on and off:
-map <leader>pp :setlocal paste!<cr>
 
 "------------------
 " Useful Functions
@@ -392,8 +381,18 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+"for long line move
 map j gj
 map k gk
+
+"Open vimgrep and put the cursor in the right position:
+map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+
+"Vimgreps in the current file:
+map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
+
+"Toggle paste mode on and off:
+map <leader>pp :setlocal paste!<cr>
 
 
 "When you press gv you vimgrep after the selected text:
@@ -466,8 +465,6 @@ if has("gui_running")
     set showtabline=2
     set columns=140
     set lines=40
-    " noremap <D-M-Left> :tabprevious<cr>
-    " noremap <D-M-Right> :tabnext<cr>
     noremap <C-Tab> :tabnext<CR>
     noremap <C-S-Tab> :tabprev<CR>
     map <D-1> 1gt
@@ -481,4 +478,3 @@ if has("gui_running")
     map <D-9> 9gt
     map <D-0> :tablast<CR>
 endif
-let g:session_autoload = 'yes'
