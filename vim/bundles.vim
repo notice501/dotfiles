@@ -91,6 +91,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'cookies/github'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle "vim-pandoc/vim-pandoc"
+Bundle "tpope/vim-pastie"
 "----------------------------------------
 " Syntax/Indent for language enhancement
 "----------------------------------------
