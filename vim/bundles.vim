@@ -84,6 +84,7 @@ Bundle 'airblade/vim-gitgutter'
 "-------------
 " Other Utils
 " ------------
+Bundle "terryma/vim-expand-region"
 Bundle 'nvie/vim-togglemouse'
 Bundle 'vim-scripts/Gist.vim'
 Bundle 'vim-scripts/cmdline-completion'

@@ -14,7 +14,7 @@ filetype plugin indent on
 " enable syntax hightlight and completion
 syntax on
 
-"must be execute before session load
+"must be executed before session load
 execute neocomplete#initialize()
 
 
@@ -40,6 +40,7 @@ hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on
 "    means that you can undo even when you close a buffer/VIM
@@ -55,9 +56,11 @@ cnoremap <C-A>   <Home>
 cnoremap <C-E>   <End>
 cnoremap <C-K>   <C-U>
 
+" paste without replace
+xnoremap p pgvy
+
 " search
 set incsearch
-"set highlight 	" conflict with highlight current line
 set ignorecase
 set smartcase
 
@@ -92,9 +95,6 @@ set shiftwidth=4    " indent width
 " set smarttab
 set expandtab       " expand tab to space
 
-"ctags
-set tags=tags;
-set autochdir
 
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -149,6 +149,9 @@ autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 "dash
 :nmap <silent> <leader>z <Plug>DashSearch
 
+"ctags
+set tags=tags;
+set autochdir
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
@@ -376,6 +379,7 @@ nnoremap <leader>r :Unite register<cr>
 "------------------
 "Switch CWD to the directory of the open buffer:
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
