@@ -116,9 +116,8 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 " highlight tabs and trailing spaces
-set listchars=tab:>-,trail:-
 set list
-
+set listchars=eol:$,tab:>-,trail:-,extends:>,precedes:<
 "IndentGuidesToggle
 let g:indent_guides_enable_on_vim_startup = 1
 "-----------------
@@ -448,7 +447,7 @@ autocmd BufReadPost *
       \ endif
 
 " w!! to sudo & write a file
-cmap w!! w !sudo tee >/dev/null %
+cmap w!! w !sudo tee >/dev/null % 
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>rv :e $MYVIMRC<CR>
