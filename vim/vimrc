@@ -156,7 +156,7 @@ set autochdir
 " => MRU plugin
 """"""""""""""""""""""""""""""
 let MRU_Max_Entries = 400
-map <leader>s :MRU<CR>
+map <leader>x :MRU<CR>
 
 "tabbar
 "let g:Tb_MaxSize = 2
