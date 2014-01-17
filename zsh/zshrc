@@ -45,6 +45,8 @@ export PATH=/Users/foocoder/develop/apache-tomcat-7.0.37/bin:$PATH
 export PATH=/Users/foocoder/develop/android-sdk-macosx/platform-tools:$PATH
 export PATH=/usr/local/nginx/nginx8011/sbin:$PATH
 export PATH=/Users/foocoder/develop/github/git-imerge:$PATH
+export PATH=/Users/foocoder/develop/dart/dart-sdk/bin:$PATH
+export DART_SDK=/Users/foocoder/develop/dart/dart-sdk/
 #vim mode
 #bindkey -v
 
