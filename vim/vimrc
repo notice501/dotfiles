@@ -241,7 +241,9 @@ let NERDCompactSexyComs=1
 let g:user_zen_expandabbr_key='<C-j>'
 
 " powerline
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
+set laststatus=2 " Always display the statusline in all windows
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 
 "neosnippet && neocomplete
@@ -465,7 +467,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
-    set guifont=Source\ Code\ Pro:h13
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h13
     set showtabline=2
     set columns=140
     set lines=40

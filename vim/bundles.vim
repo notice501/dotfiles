@@ -79,6 +79,7 @@ Bundle 'vim-scripts/mru.vim'
 Bundle 'jelera/vim-javascript-syntax'
 "vim gutter
 Bundle 'airblade/vim-gitgutter'
+Bundle 'vim-scripts/Conque-Shell'
 "Bundle 'wookiehangover/jshint.vim'
 
 "-------------
