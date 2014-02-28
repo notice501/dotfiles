@@ -58,7 +58,7 @@ Bundle 'sjl/gundo.vim'
 "Bundle 'Raimondi/delimitMate'
 Bundle 'kana/vim-smartinput'
 Bundle 'godlygeek/tabular'
-Bundle 'nathanaelkane/vim-indent-guides'
+"Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'yueyoum/vim-linemovement'
 Bundle 'yonchu/accelerated-smooth-scroll'
 
@@ -79,6 +79,7 @@ Bundle 'vim-scripts/mru.vim'
 "Bundle 'jaxbot/brolink.vim'
 Bundle "junegunn/goyo.vim"
 Bundle "amix/vim-zenroom2"
+Bundle "Yggdroot/indentLine"
 
 "syntax js
 Bundle 'jelera/vim-javascript-syntax'
@@ -150,4 +151,3 @@ Bundle 'tomasr/molokai'
 "Bundle 'ShowTrailingWhitespace'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'maksimr/vim-jsbeautify'
-filetype plugin indent on     " required!

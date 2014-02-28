@@ -118,8 +118,9 @@ let g:html_indent_style1 = "inc"
 " highlight tabs and trailing spaces
 set list
 set listchars=tab:>-,trail:-,extends:>,precedes:<
-"IndentGuidesToggle
+"IndentGuides
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
 "-----------------
 " Plugin settings
 "-----------------
