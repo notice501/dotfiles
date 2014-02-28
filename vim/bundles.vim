@@ -72,9 +72,14 @@ Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
+"Bundle 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
 Bundle 'Shougo/unite.vim'
 Bundle 'vim-scripts/mru.vim'
+"Bundle 'jaxbot/brolink.vim'
+Bundle "junegunn/goyo.vim"
+Bundle "amix/vim-zenroom2"
+
 "syntax js
 Bundle 'jelera/vim-javascript-syntax'
 "vim gutter
@@ -90,7 +95,7 @@ Bundle 'nvie/vim-togglemouse'
 Bundle 'vim-scripts/Gist.vim'
 Bundle 'vim-scripts/cmdline-completion'
 Bundle 'mattn/webapi-vim'
-Bundle 'cookies/github'
+" Bundle 'cookies/github'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle "vim-pandoc/vim-pandoc"
 Bundle "tpope/vim-pastie"

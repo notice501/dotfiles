@@ -30,7 +30,7 @@ let g:syntastic_javascript_checkers=['jshint']
 set background=dark
 "color vividchalk
 color molokai
-"let g:molokai_original = 1
+let g:molokai_original = 0
 
 " For showmarks plugin
 hi ShowMarksHLl ctermbg=Yellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
@@ -183,7 +183,7 @@ let showmarks_hlline_upper = 1
 nmap <F10> :MarksBrowser<cr>
 
 "yankring
-nnoremap <silent> <F9> :YRShow<CR>
+nnoremap <leader>q :YRShow<CR>
 let g:yankring_replace_n_pkey = 'π'
 let g:yankring_replace_n_nkey = '˜'
 let g:yankring_history_dir = '~/.vim/temp_dirs/'
@@ -245,6 +245,10 @@ let g:Powerline_symbols = 'fancy'
 set laststatus=2 " Always display the statusline in all windows
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
+"zenroom goyo
+nnoremap <silent> <leader>d :Goyo<cr>
+let g:goyo_margin_top=1
+let g:goyo_margin_bottom=1
 
 "neosnippet && neocomplete
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -400,6 +404,9 @@ map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><r
 "Toggle paste mode on and off:
 map <leader>pp :setlocal paste!<cr>
 
+"use ag instead of ack, should install the_silver_searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 
 "When you press gv you vimgrep after the selected text:
 vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
@@ -468,7 +475,7 @@ if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
     set guifont=Source\ Code\ Pro\ for\ Powerline:h13
-    set showtabline=2
+    set showtabline=2 " always show tabs in gvim, but not vim
     set columns=140
     set lines=40
     noremap <C-Tab> :tabnext<CR>
