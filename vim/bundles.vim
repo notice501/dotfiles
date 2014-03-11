@@ -12,10 +12,11 @@ Bundle 'gmarik/vundle'
 " Code Completions
 "------------------
 "Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplete.vim'
-Bundle 'ervandew/supertab'
+"Bundle 'Shougo/neocomplete.vim'
+"Bundle 'ervandew/supertab'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'honza/vim-snippets'
-Bundle 'Shougo/neosnippet'
+"Bundle 'Shougo/neosnippet'
 "Bundle 'honza/snipmate-snippets'
 Bundle 'mattn/zencoding-vim'
 " snipmate dependencies
@@ -58,9 +59,13 @@ Bundle 'sjl/gundo.vim'
 "Bundle 'Raimondi/delimitMate'
 Bundle 'kana/vim-smartinput'
 Bundle 'godlygeek/tabular'
-"Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'yueyoum/vim-linemovement'
 Bundle 'yonchu/accelerated-smooth-scroll'
+Bundle "michaeljsmith/vim-indent-object"
+Bundle "vim-scripts/argtextobj.vim"
+Bundle "bkad/CamelCaseMotion"
+Bundle "Shougo/wildfire.vim"
 
 "--------------
 " IDE features
@@ -79,7 +84,8 @@ Bundle 'vim-scripts/mru.vim'
 "Bundle 'jaxbot/brolink.vim'
 Bundle "junegunn/goyo.vim"
 Bundle "amix/vim-zenroom2"
-Bundle "Yggdroot/indentLine"
+"Bundle "Yggdroot/indentLine"
+Bundle "dyng/ctrlsf.vim"
 
 "syntax js
 Bundle 'jelera/vim-javascript-syntax'
