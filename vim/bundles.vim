@@ -12,17 +12,17 @@ Bundle 'gmarik/vundle'
 " Code Completions
 "------------------
 "Bundle 'Shougo/neocomplcache'
-"Bundle 'Shougo/neocomplete.vim'
-"Bundle 'ervandew/supertab'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'honza/vim-snippets'
-"Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neocomplete.vim'
+Bundle 'ervandew/supertab'
+"Bundle 'Valloric/YouCompleteMe'
+" Bundle 'honza/vim-snippets'
+Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
 "Bundle 'honza/snipmate-snippets'
 Bundle 'mattn/zencoding-vim'
 " snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-"terryma / vim-multiple-cursors
 Bundle 'terryma/vim-multiple-cursors'
 "dash
 Bundle 'rizzatti/funcoo.vim'
@@ -106,6 +106,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle "vim-pandoc/vim-pandoc"
 Bundle "tpope/vim-pastie"
+Bundle "ianva/vim-youdao-translater"
 "----------------------------------------
 " Syntax/Indent for language enhancement
 "----------------------------------------
