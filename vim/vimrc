@@ -2,7 +2,6 @@
 let mapleader = ","
 
 source ~/.vim/bundles.vim
-execute pathogen#infect()
 
 " encoding dectection
 set fileencoding=utf-8
@@ -18,13 +17,10 @@ syntax on
 execute neocomplete#initialize()
 
 
-"syntastic
-"let g:syntastic_check_on_open=1
-let g:syntastic_javascript_checkers=['jshint']
 
 
 "--------
-" Vim UI
+" Vim user interface
 "--------
 " color scheme
 set background=dark
@@ -41,23 +37,6 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Turn persistent undo on
-"    means that you can undo even when you close a buffer/VIM
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-try
-    set undodir=~/.vim/temp_dirs/undodir
-    set undofile
-catch
-endtry
-
-" Bash like keys for the command line
-cnoremap <C-A>   <Home>
-cnoremap <C-E>   <End>
-cnoremap <C-K>   <C-U>
-
-" paste without replace
-xnoremap p pgvy
 
 " search
 set incsearch
@@ -83,7 +62,7 @@ set laststatus=2                                                  " use 2 lines 
 set matchtime=2                                                   " show matching bracket for 0.2 seconds
 set matchpairs+=<:>                                               " specially for html
 set clipboard=unnamed                                             " yank and paste with the system clipboard
-" set relativenumber
+set hidden
 
 " Default Indentation
 set autoindent
@@ -91,8 +70,6 @@ set smartindent     " indent when
 set tabstop=4       " tab width
 set softtabstop=4   " backspace
 set shiftwidth=4    " indent width
-" set textwidth=79
-" set smarttab
 set expandtab       " expand tab to space
 
 
@@ -118,11 +95,18 @@ let g:html_indent_style1 = "inc"
 " highlight tabs and trailing spaces
 set list
 set listchars=tab:>-,trail:-,extends:>,precedes:<
-"IndentGuides
-let g:indent_guides_enable_on_vim_startup = 1
+
 "-----------------
 " Plugin settings
 "-----------------
+"
+"IndentGuides
+let g:indent_guides_enable_on_vim_startup = 1
+
+"syntastic
+"let g:syntastic_check_on_open=1
+let g:syntastic_javascript_checkers=['jshint']
+
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -167,10 +151,7 @@ map <leader>x :MRU<CR>
 "hi Tb_VisibleNormal ctermbg=252 ctermfg=235
 "hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
-"marks
-""""""""""""""""""""""""""""""
 " showmarks setting
-""""""""""""""""""""""""""""""
 " Enable ShowMarks
 let showmarks_enable = 1
 " Show which marks
@@ -258,6 +239,10 @@ let NERDSpaceDelims=1
 "nmap <D-/> :NERDComToggleComment<cr>
 let NERDCompactSexyComs=1
 
+"gitgutter
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+
 " ZenCoding
 let g:user_zen_expandabbr_key='<C-j>'
 
@@ -271,18 +256,6 @@ nnoremap <silent> <leader>d :Goyo<cr>
 let g:goyo_margin_top=1
 let g:goyo_margin_bottom=1
 
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
 
 " For snippet_complete marker.
 if has('conceal')
@@ -337,27 +310,6 @@ inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-
-" For cursor moving in insert mode(Not recommended)
-"inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
-"inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
-"inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
-"inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
-" Or set this.
-"let g:neocomplete#enable_cursor_hold_i = 1
-" Or set this.
-"let g:neocomplete#enable_insert_char_pre = 1
-
-" AutoComplPop like behavior.
-"let g:neocomplete#enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -370,35 +322,17 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
-"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-" Enable snipMate compatibility feature.
-" let g:neosnippet#enable_snipmate_compatibility = 1
-"
-" " Tell Neosnippet about the other snippets
-" let g:neosnippet#snippets_directory='~/.dotfiles/vim/bundle/vim-snippets/snippets'
 
 
 " SuperTab
-"let g:SuperTabDefultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
 let g:SuperTabRetainCompletionType=2
 
-"map alt+j/k line move, os X only
-nnoremap ∆ :m .+1<CR>==
-nnoremap ˚ :m .-2<CR>==
-
-inoremap ∆ <Esc>:m .+1<CR>==gi
-inoremap ˚ <Esc>:m .-2<CR>==gi
-
-vnoremap ∆ :m '>+1<CR>gv=gv
-vnoremap ˚ :m '<-2<CR>gv=gv
 
 "auto session let g:session_autoload = 'yes'
 " auto load session
@@ -417,11 +351,12 @@ autocmd FileType css noremap <buffer> <c-s> :call CSSBeautify()<cr>
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
-" Keybindings for plugin toggle
+" other keybindings for plugin toggle
 nmap <F5> :TagbarToggle<cr>
 nmap <F6> :NERDTreeToggle<cr>
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
+map <F7> :Gist
 "nmap  <D-/> :
 nnoremap <leader>a :CtrlSF 
 nnoremap <leader>v V`]
@@ -432,6 +367,36 @@ nnoremap <leader>r :Unite register<cr>
 "------------------
 " Useful Functions
 "------------------
+
+" Turn persistent undo on
+"    means that you can undo even when you close a buffer/VIM
+try
+    set undodir=~/.vim/temp_dirs/undodir
+    set undofile
+catch
+endtry
+
+" paste without replace
+xnoremap p pgvy
+
+" Move a line of text using ALT+[jk]
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+if has("mac") || has("macunix")
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
+endif
+
+
 "Switch CWD to the directory of the open buffer:
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
@@ -508,11 +473,6 @@ autocmd BufReadPost *
 " w!! to sudo & write a file
 cmap w!! w !sudo tee >/dev/null % 
 
-" Quickly edit/reload the vimrc file
-" nmap <silent> <leader>rv :e $MYVIMRC<CR>
-" nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-
 :command W w
 :command WQ wq
 :command Wq wq
@@ -520,7 +480,9 @@ cmap w!! w !sudo tee >/dev/null %
 :command Qa qa
 :command QA qa
 
-" for macvim
+"--------
+"for macvim
+"--------
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
