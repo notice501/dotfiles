@@ -1,14 +1,19 @@
 [user]
-	name = notice501
-	email = notice520@gmail.com
+    name = notice501
+    email = notice520@gmail.com
 [color]
-	ui = true
+    ui = true
 [push]
-	default = matching
+    default = matching
 [core]
-	editor = /usr/local/bin/vim
+    editor = /usr/local/bin/vim
 [github]
-	user = notice501
+    user = notice501
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	status = st
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    ci = commit
+    st = status
+    br = branch
+    co = checkout
+    unstage = reset HEAD --
+
