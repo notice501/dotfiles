@@ -63,6 +63,8 @@ Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/session.vim--Odding'
 Bundle 'rizzatti/dash.vim'
 Bundle 'vim-scripts/Conque-Shell'
+Bundle 'chemzqm/wxapp.vim'
+Bundle 'othree/xml.vim'
 
 "-------------
 " Other Utils
@@ -75,7 +77,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'vim-scripts/YankRing.vim'
 "Bundle "vim-pandoc/vim-pandoc"
 Bundle "tpope/vim-pastie"
-Bundle "ianva/vim-youdao-translater"
+"Bundle "ianva/vim-youdao-translater"
 Bundle 'bronson/vim-trailing-whitespace'
 
 "----------------------------------------
@@ -85,6 +87,16 @@ Bundle 'bronson/vim-trailing-whitespace'
 "js
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'maksimr/vim-jsbeautify'
+
+"jsx
+Bundle 'mxw/vim-jsx'
+" vim-react-snippets:
+Bundle "justinj/vim-react-snippets"
+" Ultisnips
+Bundle "SirVer/ultisnips"
+
+" Other sets of snippets (optional):
+Bundle "honza/vim-snippets"
 
 " web backend
 Bundle '2072/PHP-Indenting-for-VIm'

@@ -76,13 +76,14 @@ set expandtab       " expand tab to space
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
-autocmd FileType coffee,javascript setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
+autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType html,htmldjango,xhtml,haml,tpl setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 
 " syntax support
 "autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
+let g:jsx_ext_required = 0
 
 "tpl support
 au BufNewFile,BufRead *.tpl set ft=html
@@ -105,7 +106,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 "syntastic
 "let g:syntastic_check_on_open=1
-let g:syntastic_javascript_checkers=['jshint']
+"let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
@@ -362,6 +364,46 @@ nnoremap <leader>a :CtrlSF
 nnoremap <leader>v V`]
 nnoremap <leader>i :FixWhitespace<cr>
 nnoremap <leader>r :Unite register<cr>
+
+"emmet
+let g:user_emmet_settings = {
+    \ 'wxss': {
+    \   'extends': 'css',
+    \ },
+    \ 'wxml': {
+    \   'extends': 'html',
+    \   'aliases': {
+    \     'div': 'view',
+    \     'span': 'text',
+    \   },
+    \  'default_attributes': {
+    \     'block': [{'wx:for-items': '{{list}}','wx:for-item': '{{item}}'}],
+    \     'navigator': [{'url': '', 'redirect': 'false'}],
+    \     'scroll-view': [{'bindscroll': ''}],
+    \     'swiper': [{'autoplay': 'false', 'current': '0'}],
+    \     'icon': [{'type': 'success', 'size': '23'}],
+    \     'progress': [{'precent': '0'}],
+    \     'button': [{'size': 'default'}],
+    \     'checkbox-group': [{'bindchange': ''}],
+    \     'checkbox': [{'value': '', 'checked': ''}],
+    \     'form': [{'bindsubmit': ''}],
+    \     'input': [{'type': 'text'}],
+    \     'label': [{'for': ''}],
+    \     'picker': [{'bindchange': ''}],
+    \     'radio-group': [{'bindchange': ''}],
+    \     'radio': [{'checked': ''}],
+    \     'switch': [{'checked': ''}],
+    \     'slider': [{'value': ''}],
+    \     'action-sheet': [{'bindchange': ''}],
+    \     'modal': [{'title': ''}],
+    \     'loading': [{'bindchange': ''}],
+    \     'toast': [{'duration': '1500'}],
+    \     'audio': [{'src': ''}],
+    \     'video': [{'src': ''}],
+    \     'image': [{'src': '', 'mode': 'scaleToFill'}],
+    \   }
+    \ },
+    \}
 
 
 "------------------
