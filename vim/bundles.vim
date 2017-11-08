@@ -65,6 +65,8 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'vim-scripts/Conque-Shell'
 Bundle 'chemzqm/wxapp.vim'
 Bundle 'othree/xml.vim'
+Bundle 'yuezk/weex.vim'
+Bundle 'posva/vim-vue'
 
 "-------------
 " Other Utils

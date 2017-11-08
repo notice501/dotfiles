@@ -78,7 +78,7 @@ autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=12
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
-autocmd FileType html,htmldjango,xhtml,haml,tpl setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
+autocmd FileType html,htmldjango,xhtml,haml,tpl,we setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 
 " syntax support
@@ -87,6 +87,7 @@ let g:jsx_ext_required = 0
 
 "tpl support
 au BufNewFile,BufRead *.tpl set ft=html
+au BufNewFile,BufRead *.we set ft=html
 "au FileType javascript call JavaScriptFold()
 " js
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -360,7 +361,7 @@ nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 map <F7> :Gist
 "nmap  <D-/> :
-nnoremap <leader>a :CtrlSF 
+nnoremap <leader>a :CtrlSF
 nnoremap <leader>v V`]
 nnoremap <leader>i :FixWhitespace<cr>
 nnoremap <leader>r :Unite register<cr>
@@ -513,7 +514,7 @@ autocmd BufReadPost *
       \ endif
 
 " w!! to sudo & write a file
-cmap w!! w !sudo tee >/dev/null % 
+cmap w!! w !sudo tee >/dev/null %
 
 :command W w
 :command WQ wq
